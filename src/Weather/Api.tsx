@@ -14,7 +14,7 @@ async function ApiWeather() {
         };
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log({result})
+
         try {
             if (response.status === 200) {
                 return result

@@ -48,9 +48,9 @@ const LayoutRoutes: React.FC<Props> = ({ title, tasks }) => {
           <TaskItem key={task.id} isListInView1={isListInView1} task={task} />
         ))}
         <li>
-          <button
+          <button 
             onClick={openModalHandler}
-            className={`border-2 border-slate-300
+            className={`adicionarTarefa border-2 border-slate-300
              text-slate-400 w-full rounded-lg
               border-dashed transition hover:bg-slate-300
                hover:text-slate-500

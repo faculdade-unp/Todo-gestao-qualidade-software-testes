@@ -90,8 +90,8 @@ const ModalCreateTask: React.FC<{
     return directories[0];
   });
 
-  const addNewTaskHandler = (event: React.FormEvent): void => {
-    event.preventDefault();
+  const addNewTaskHandler = (event: React.FormEvent | null): void => {
+    event && event.preventDefault();
 
     isTitleValid.current = title.trim().length > 0;
     isDateValid.current = date.trim().length > 0;
@@ -108,6 +108,7 @@ const ModalCreateTask: React.FC<{
       };
       onConfirm(newTask);
       onClose();
+      
     }
   };
   return (

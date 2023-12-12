@@ -38,7 +38,7 @@ function Board({ setScores }) {
     setBoard(editedBoard);
 
     if (isTerminal(editedBoard).winner === "X") {
-      console.log(isTerminal(editedBoard));
+
       setWinLine(isTerminal(editedBoard).winLine);
       setScores((prevState) => ({ ...prevState, x: prevState.x + 1 }));
       return;
@@ -144,7 +144,7 @@ function Board({ setScores }) {
         best = Math.min(best, score);
 
         if (depth === 0) {
-          console.log(nodes);
+
           const moves = nodes[score] ? `${nodes[score]},${index}` : index;
           nodes[score] = moves;
         }

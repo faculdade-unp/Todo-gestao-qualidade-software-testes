@@ -11,7 +11,7 @@ const defaultTasks: Task[] = [
   {
     title: "Task One",
     important: false,
-    description: "Write your description",
+    description: "Escreva a descrição da tarefa.",
     date: "2023-07-22",
     dir: "Main",
     completed: true,
@@ -157,7 +157,7 @@ export const tasksMiddleware =
     }
 
     if (tasksActions.removeTask.match(action)) {
-      console.log(JSON.parse(localStorage.getItem("tasks")!));
+    
       if (localStorage.getItem("tasks")) {
         const localStorageTasks = JSON.parse(localStorage.getItem("tasks")!);
         if (localStorageTasks.length === 0) {

@@ -37,7 +37,7 @@ export default function Weather() {
     useEffect(() => {
         ApiWeather().then(response => {
             if (response) {
-                console.log({response: response.location})
+               
                 state.country = response.location.country;
                 state.region = response.location.region;
                 state.countryName = response.location.name;

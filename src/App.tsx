@@ -7,7 +7,8 @@ import { Task } from "./interfaces";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { modalActions } from "./store/Modal.store";
 import { tasksActions } from "./store/Tasks.store";
-
+import { segrecacaoAcesso } from "./segregacao_acesso";
+// segrecacaoAcesso()
 const App: React.FC = () => {
   const modal = useAppSelector((state) => state.modal);
 
