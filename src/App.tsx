@@ -13,14 +13,14 @@ const App: React.FC = () => {
   const modal = useAppSelector((state) => state.modal);
 
   const dispatch = useAppDispatch();
+  const createNewTaskHandler = (task: Task) => {
+    dispatch(tasksActions.addNewTask(task));
+  };
 
   const closeModalCreateTask = () => {
     dispatch(modalActions.closeModalCreateTask());
   };
 
-  const createNewTaskHandler = (task: Task) => {
-    dispatch(tasksActions.addNewTask(task));
-  };
 
 
   return (
